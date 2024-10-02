@@ -1,111 +1,117 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0; /* Adicionando margem zero para remover espaços indesejados */
+body { 
+    display: flex; /* Usando flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza itens em coluna */
+    margin: 0; /* Remove margens padrão */
 }
+
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    border: 10px solid blue; 
-    width: 80%;
-    align-items: center;
-    padding: 20px;
+    display: flex; /* Usando flexbox para layout do cabeçalho */
+    justify-content: space-between; /* Espaça elementos */
+    border: 10px solid blue; /* Borda azul ao redor */
+    width: 80%; /* Largura do cabeçalho */
+    align-items: center; /* Alinha itens verticalmente */
+    padding: 20px; /* Espaçamento interno */
 }
+
 
 nav { 
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    display: flex; /* Usando flexbox */
+    align-items: center; /* Alinha itens verticalmente */
+    gap: 10px; /* Espaçamento entre itens */
 }
 
+
 .logo {
-    width: 100px;
-    height: 50px;
-    background-color: blue;
-    border: 10px solid blue;
+    width: 100px; /* Largura do logo */
+    height: 50px; /* Altura do logo */
+    background-color: blue; /* Cor de fundo azul */
+    border: 10px solid blue; /* Borda azul ao redor do logo */
 }
 
 .section {
-    min-width: 80%;
-    height: 200px;
-    border: 10px solid blue;
-    margin-top: 30px;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-wrap: wrap; 
+    min-width: 80%; /* Largura mínima */
+    height: 200px; /* Altura da seção */
+    border: 10px solid blue; /* Borda azul ao redor */
+    margin-top: 30px; /* Espaço acima da seção */
+    display: flex; /* Usando flexbox */
+    justify-content: space-between; /* Espaça itens */
+    align-items: center; /* Alinha itens verticalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
 }
+
 
 .option { 
-    width: 80px;
-    height: 50px;
-    border: 10px solid blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex: 1; 
-    max-width: 100px; 
+    width: 80px; /* Largura da opção */
+    height: 50px; /* Altura da opção */
+    border: 10px solid blue; /* Borda azul ao redor */
+    display: flex; /* Usando flexbox */
+    justify-content: center; /* Centraliza texto horizontalmente */
+    align-items: center; /* Centraliza texto verticalmente */
+    text-align: center; /* Centraliza texto */
+    flex: 1; /* Permite crescimento */
+    max-width: 100px; /* Largura máxima */
 }
+
 
 .box {
-    border: 8px solid blueviolet;
-    height: 130px;
-    width: 270px;
-    margin: 10px;
-    flex: 1; 
-    max-width: 280px; 
+    border: 8px solid blueviolet; /* Borda roxa ao redor */
+    height: 130px; /* Altura da caixa */
+    width: 270px; /* Largura da caixa */
+    margin: 10px; /* Espaço ao redor da caixa */
+    flex: 1; /* Permite crescimento */
+    max-width: 280px; /* Largura máxima */
 }
 
-
+/* Media query para telas menores que 768px */
 @media (max-width: 768px) {
     .header {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Alinha itens em coluna */
+        align-items: center; /* Centraliza itens */
     }
 
     .logo {
-        margin-bottom: 10px; 
+        margin-bottom: 10px; /* Espaço abaixo do logo */
     }
 
     nav {
-        gap: 30px;
+        gap: 30px; /* Aumenta o espaçamento */
     }
 
     .section {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column; /* Alinha itens em coluna */
+        align-items: center; /* Centraliza itens */
     }
 
     .option {
-        width: 90%; 
-        max-width: none; 
-        margin: 5px 0; 
+        width: 90%; /* Largura maior */
+        max-width: none; /* Remove largura máxima */
+        margin: 5px 0; /* Espaçamento vertical */
     }
 
     .box {
-        width: 80%; 
-        max-width: none; 
+        width: 80%; /* Largura maior */
+        max-width: none; /* Remove largura máxima */
     }
 }
 
+
 @media (max-width: 480px) {
     .header {
-        padding: 10px;
+        padding: 10px; /* Reduz o padding */
     }
 
     .section {
-        height: auto; 
+        height: auto; /* Altura automática */
     }
 
     .option {
-        height: 40px; 
+        height: 40px; /* Altura menor */
     }
 
     .box {
-        height: 100px;
+        height: 100px; /* Altura menor */
     }
 }
