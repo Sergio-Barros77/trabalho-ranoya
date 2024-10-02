@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0; /* Adicionando margem zero para remover espaços indesejados */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 10px solid blue; 
+    width: 80%;
+    align-items: center;
+    padding: 20px;
+}
+
+nav { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    border: 10px solid blue;
+}
+
+.section {
+    min-width: 80%;
+    height: 200px;
+    border: 10px solid blue;
+    margin-top: 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.option { 
+    width: 80px;
+    height: 50px;
+    border: 10px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1; 
+    max-width: 100px; 
+}
+
+.box {
+    border: 8px solid blueviolet;
+    height: 130px;
+    width: 270px;
+    margin: 10px;
+    flex: 1; 
+    max-width: 280px; 
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .logo {
+        margin-bottom: 10px; 
+    }
+
+    nav {
+        gap: 30px;
+    }
+
+    .section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .option {
+        width: 90%; 
+        max-width: none; 
+        margin: 5px 0; 
+    }
+
+    .box {
+        width: 80%; 
+        max-width: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
+
+    .section {
+        height: auto; 
+    }
+
+    .option {
+        height: 40px; 
+    }
+
+    .box {
+        height: 100px;
+    }
+}
